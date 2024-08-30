@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var center_of_map
-var speed = 60.0
+var speed = 75.0
 var direction
 var green_alien_sprite
 

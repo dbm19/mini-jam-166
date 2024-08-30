@@ -17,3 +17,5 @@ func _process(delta: float) -> void:
 		bullet_instance = bullet_scene.instantiate()
 		bullet_instance.global_position = position
 		get_node("../").add_child(bullet_instance)
+		
+		get_node("BulletSound").playing = true
