@@ -44,6 +44,7 @@ texture = ExtResource("1_75eix")
 curve = SubResource("Curve2D_cgxby")
 
 [node name="AlienSpawnTimer" type="Timer" parent="AlienSpawnPath"]
+wait_time = 2.0
 autostart = true
 
 [node name="AlienSpawnPathFollow" type="PathFollow2D" parent="AlienSpawnPath"]
