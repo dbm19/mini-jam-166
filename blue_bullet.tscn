@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgi8ncqaa6kno"]
+
+[ext_resource type="Texture2D" uid="uid://b4rnmxwef6tli" path="res://Untitled_Artwork.png" id="1_gsw4q"]
+[ext_resource type="Script" path="res://blue_bullet.gd" id="1_xh5qn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3xgn6"]
+
+[node name="BlueBullet" type="Area2D" groups=["bullet"]]
+script = ExtResource("1_xh5qn")
+
+[node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3xgn6")
+
+[node name="BlueBulletSprite" type="Sprite2D" parent="."]
+scale = Vector2(0.0115408, 0.0115408)
+texture = ExtResource("1_gsw4q")
