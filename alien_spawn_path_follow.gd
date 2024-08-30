@@ -20,4 +20,5 @@ func _process(delta: float) -> void:
 func _on_alien_spawn_timer_timeout() -> void:
 	progress_ratio = rng.randf_range(0.0, 1.0)
 	var alien_instance = alien_scene.instantiate()
-	self.add_child(alien_instance)
+	alien_instance.position = position
+	get_node("../../").add_child(alien_instance)
