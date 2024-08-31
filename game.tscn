@@ -51,7 +51,6 @@ texture = ExtResource("1_75eix")
 curve = SubResource("Curve2D_cgxby")
 
 [node name="AlienSpawnTimer" type="Timer" parent="AlienSpawnPath"]
-wait_time = 1.5
 autostart = true
 
 [node name="AlienSpawnPathFollow" type="PathFollow2D" parent="AlienSpawnPath"]
@@ -115,6 +114,7 @@ theme_override_font_sizes/font_size = 50
 stream = ExtResource("12_xcqsi")
 
 [connection signal="timeout" from="AlienSpawnPath/AlienSpawnTimer" to="AlienSpawnPath/AlienSpawnPathFollow" method="_on_alien_spawn_timer_timeout"]
+[connection signal="ammo_down" from="EarthArea" to="." method="_on_earth_area_ammo_down"]
 [connection signal="ammo_up" from="EarthArea" to="." method="_on_earth_area_ammo_up"]
 [connection signal="area_entered" from="EarthArea" to="EarthArea" method="_on_area_entered"]
 [connection signal="ammo_down" from="EarthArea/PlayerPath/PlayerPathFollow" to="." method="_on_player_path_follow_ammo_down"]

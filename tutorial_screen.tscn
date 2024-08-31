@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=3 uid="uid://bse5xvn70hek0"]
+
+[ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_nruhg"]
+[ext_resource type="Texture2D" uid="uid://bgd5p2ftcw740" path="res://art_assets/bubble_alien.png" id="2_a00nr"]
+[ext_resource type="FontFile" uid="uid://ceqsmd7sr5uio" path="res://fonts/spartan/Spartan-Regular.ttf" id="2_cvukq"]
+[ext_resource type="Texture2D" uid="uid://rmca6472ifgi" path="res://art_assets/Screenshot 2024-08-31 at 14.50.01.png" id="2_e687m"]
+[ext_resource type="Texture2D" uid="uid://drfqd5vq4r5nw" path="res://art_assets/peg_alien.png" id="3_nnkoj"]
+[ext_resource type="Texture2D" uid="uid://gogaswtdnc6l" path="res://art_assets/alien.png" id="4_52878"]
+
+[node name="TutorialScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialBackground" type="TextureRect" parent="."]
+offset_left = 248.0
+offset_top = -1290.0
+offset_right = 1916.0
+offset_bottom = 1098.0
+rotation = 0.383673
+texture = ExtResource("1_nruhg")
+
+[node name="Earth" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 528.0
+offset_right = 417.0
+offset_bottom = 636.0
+texture = ExtResource("2_e687m")
+expand_mode = 1
+
+[node name="BubbleAlien" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 161.0
+offset_right = 996.0
+offset_bottom = 289.0
+texture = ExtResource("2_a00nr")
+
+[node name="BubbleAlienLabel" type="Label" parent="BubbleAlien"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 142.0
+offset_right = 121.0
+offset_bottom = 165.0
+text = "Bubble Alien"
+
+[node name="PegAlien" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 166.0
+offset_right = 613.0
+offset_bottom = 294.0
+texture = ExtResource("3_nnkoj")
+
+[node name="PegAlienLabel" type="Label" parent="PegAlien"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 139.0
+offset_right = 99.0
+offset_bottom = 162.0
+text = "Peg Alien"
+
+[node name="NormalAlien" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 165.0
+offset_right = 238.0
+offset_bottom = 293.0
+texture = ExtResource("4_52878")
+
+[node name="NormalAlienLabel" type="Label" parent="NormalAlien"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 146.0
+offset_right = 115.0
+offset_bottom = 169.0
+text = "Normal Alien
+"
+
+[node name="GameTutorial" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 1065.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_cvukq")
+theme_override_font_sizes/font_size = 20
+text = "The objective of this game is to convert as many green aliens into blue aliens.
+Green aliens must be shot at with the correct bullet type in order to become blue. 
+For example, the peg alien must be shot at with the peg bullet.
+"
+
+[node name="ControlsTutorial" type="Label" parent="."]
+offset_left = 778.0
+offset_top = 432.0
+offset_right = 1296.0
+offset_bottom = 717.0
+theme_override_fonts/font = ExtResource("2_cvukq")
+theme_override_font_sizes/font_size = 15
+text = "Press \"A\" to move counter-clockwise
+Press \"D\" to move clockwise
+Press \"Space\" to fire
+
+Press \"J\" to equip the peg bullet
+Press \"K\" to equip the normal bullet
+Press \"L\" to equip the bubble bullet
+
+Press \"Esc\" to return to the main menu"
+
+[node name="ControlsTutorial2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 434.0
+offset_right = 1219.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("2_cvukq")
+theme_override_font_sizes/font_size = 15
+text = "The number at the Earth represents both your hit points and your ammo.
+Blue aliens crashing into the Earth will replenish your HP/ammo.
+Green aliens crashing into the Earth will diminish your HP/ammo.
+
+The game ends as soon as a green alien crashes into the Earth when you have 0 HP/ammo."

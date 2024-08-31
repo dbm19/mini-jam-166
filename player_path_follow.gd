@@ -1,6 +1,6 @@
 extends PathFollow2D
 
-var speed = 10
+var speed = 15
 var bullet_scene = preload("res://bullet.tscn")
 var bullet_instance
 signal ammo_down

@@ -1,7 +1,7 @@
 extends Area2D
 
 var center_of_map
-var speed = 70
+var speed = 100
 var direction
 var green_alien_sprite
 
@@ -21,13 +21,20 @@ func _on_area_entered(area: Area2D) -> void:
 		green_alien_sprite.texture = load("res://art_assets/blue_alien.png")
 		remove_from_group("normal_alien")
 		area.queue_free()
+		remove_from_group("green_alien")
+		add_to_group("blue_alien")
+		Global.score += 1
 	elif area.is_in_group("peg_bullet") && is_in_group("peg_alien"):
 		green_alien_sprite.texture = load("res://art_assets/blue_alien.png")
 		remove_from_group("peg_alien")
 		area.queue_free()
+		remove_from_group("green_alien")
+		add_to_group("blue_alien")
+		Global.score += 1
 	elif area.is_in_group("bubble_bullet") && is_in_group("bubble_alien"):
 		green_alien_sprite.texture = load("res://art_assets/blue_alien.png")
 		remove_from_group("bubble_alien")
 		area.queue_free()
-	remove_from_group("green_alien")
-	add_to_group("blue_alien")
+		remove_from_group("green_alien")
+		add_to_group("blue_alien")
+		Global.score += 1
