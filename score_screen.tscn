@@ -40,10 +40,10 @@ stretch_mode = 3
 
 [node name="Score" type="Label" parent="ScoreScreenBackground/VBoxContainer/ScoreCard"]
 layout_mode = 0
-offset_left = 393.0
-offset_top = 9.0
-offset_right = 488.0
-offset_bottom = 65.0
+offset_left = 392.0
+offset_top = 18.0
+offset_right = 487.0
+offset_bottom = 74.0
 theme_override_fonts/font = ExtResource("4_bhn5c")
 theme_override_font_sizes/font_size = 50
 text = "test"
@@ -52,10 +52,10 @@ vertical_alignment = 1
 
 [node name="BlueQuote" type="Label" parent="ScoreScreenBackground/VBoxContainer/ScoreCard"]
 layout_mode = 0
-offset_left = 271.0
-offset_top = 69.0
-offset_right = 604.0
-offset_bottom = 118.0
+offset_left = 49.0
+offset_top = 54.0
+offset_right = 829.0
+offset_bottom = 148.0
 theme_override_fonts/font = ExtResource("4_bhn5c")
 theme_override_font_sizes/font_size = 40
 text = "test"
