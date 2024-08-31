@@ -1,7 +1,7 @@
 extends Area2D
 
 var center_of_map
-var speed = 50.0
+var speed = 70
 var direction
 var green_alien_sprite
 
