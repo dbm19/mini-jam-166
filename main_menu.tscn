@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://qdr0ve6l030r"]
 
-[ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://background.png" id="1_o4ems"]
-[ext_resource type="Texture2D" uid="uid://chkalgewki3dl" path="res://title.png" id="2_k8fla"]
-[ext_resource type="Texture2D" uid="uid://6fc772ms5xjb" path="res://new_game_button.png" id="3_8s1m7"]
+[ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_o4ems"]
+[ext_resource type="Texture2D" uid="uid://chkalgewki3dl" path="res://art_assets/title.png" id="2_k8fla"]
+[ext_resource type="Texture2D" uid="uid://6fc772ms5xjb" path="res://art_assets/new_game_button.png" id="3_8s1m7"]
 [ext_resource type="Script" path="res://new_game_button.gd" id="4_c2mo5"]
 
 [node name="MainMenu" type="Control"]

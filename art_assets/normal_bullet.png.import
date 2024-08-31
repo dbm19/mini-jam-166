@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x0qfvusdccp5"
-path="res://.godot/imported/blue_alien.png-4fd2f026746243ac3e489c3a47eb9de1.ctex"
+uid="uid://d23pf8qepqppr"
+path="res://.godot/imported/normal_bullet.png-f6824d1698991cbe645192dd0aaa7154.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blue_alien.png"
-dest_files=["res://.godot/imported/blue_alien.png-4fd2f026746243ac3e489c3a47eb9de1.ctex"]
+source_file="res://art_assets/normal_bullet.png"
+dest_files=["res://.godot/imported/normal_bullet.png-f6824d1698991cbe645192dd0aaa7154.ctex"]
 
 [params]
 

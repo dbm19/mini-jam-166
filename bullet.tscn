@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgi8ncqaa6kno"]
 
-[ext_resource type="Script" path="res://blue_bullet.gd" id="1_xh5qn"]
+[ext_resource type="Script" path="res://bullet.gd" id="1_vmxg5"]
 
 [sub_resource type="Gradient" id="Gradient_kva2b"]
-colors = PackedColorArray(0.00668421, 0.217108, 0.935693, 1, 0.00784314, 0.215686, 0.937255, 1)
+colors = PackedColorArray(0.227451, 1, 0.411765, 1, 0.227837, 1, 0.411595, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_jx5un"]
 gradient = SubResource("Gradient_kva2b")
@@ -13,10 +13,10 @@ fill_to = Vector2(0.676606, 1)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2eyx8"]
 radius = 15.0
 
-[node name="BlueBullet" type="Area2D" groups=["bullet"]]
-script = ExtResource("1_xh5qn")
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_vmxg5")
 
-[node name="BlueBulletSprite" type="Sprite2D" parent="."]
+[node name="BulletSprite" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -0.300212)
 scale = Vector2(0.3125, 0.312794)
 texture = SubResource("GradientTexture2D_jx5un")
@@ -25,7 +25,7 @@ texture = SubResource("GradientTexture2D_jx5un")
 position = Vector2(0, -7.15256e-07)
 scale = Vector2(1, 1.4)
 
-[node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="."]
+[node name="BulletCollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2eyx8")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
