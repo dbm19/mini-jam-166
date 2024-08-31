@@ -1,6 +1,6 @@
 extends Node
 var ammo
-var ammo_set = ["normal", "peg"]
+var ammo_set = ["normal", "peg", "bubble"]
 var ammo_type
 
 

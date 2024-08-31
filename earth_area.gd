@@ -14,9 +14,11 @@ func _process(delta: float) -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("green_alien"):
+		print("huih")
 		area.queue_free()
 		explosion_sound.playing = true
 	elif area.is_in_group("blue_alien"):
+		print("what")
 		area.queue_free()
 		Global.ammo += 1
 		reload_sound.playing = true

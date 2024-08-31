@@ -23,9 +23,12 @@ func _process(delta: float) -> void:
 		if Global.ammo_type == "normal":
 			bullet_instance.get_node("BulletSprite").texture = load("res://art_assets/normal_bullet.png")
 			bullet_instance.add_to_group("normal_bullet")
-		else:
+		elif Global.ammo_type == "peg":
 			bullet_instance.get_node("BulletSprite").texture = load("res://art_assets/peg_bullet.png")
 			bullet_instance.add_to_group("peg_bullet")
+		else:
+			bullet_instance.get_node("BulletSprite").texture = load("res://art_assets/bubble_bullet.png")
+			bullet_instance.add_to_group("bubble_bullet")
 		get_node("../").add_child(bullet_instance)
 		get_node("BulletSound").playing = true
 		ammo_down.emit()
@@ -36,4 +39,8 @@ func _process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("select_peg_bullet"):
 		Global.ammo_type = Global.ammo_set[1]
+		get_node("../../../WeaponSwitchSound").playing = true
+
+	if Input.is_action_just_pressed("select_bubble_bullet"):
+		Global.ammo_type = Global.ammo_set[2]
 		get_node("../../../WeaponSwitchSound").playing = true
