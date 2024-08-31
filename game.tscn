@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ddhg1y4i8vu3n"]
+[gd_scene load_steps=14 format=3 uid="uid://ddhg1y4i8vu3n"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_7xvf4"]
 [ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://background.png" id="1_75eix"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cff4pquraawg2" path="res://new_earth.png" id="4_n1syj"]
 [ext_resource type="Script" path="res://alien_spawn_path_follow.gd" id="5_tf72t"]
 [ext_resource type="AudioStream" uid="uid://ba7iilcv024u6" path="res://laser_sound.wav" id="8_5ky1a"]
+[ext_resource type="FontFile" uid="uid://dxupukfoqr3bi" path="res://fonts/spartan/Spartan-Bold.ttf" id="9_4xa4r"]
 
 [sub_resource type="Curve2D" id="Curve2D_cgxby"]
 _data = {
@@ -93,5 +94,15 @@ shape = SubResource("CircleShape2D_04d4h")
 [node name="BulletSound" type="AudioStreamPlayer2D" parent="EarthArea/PlayerPath/PlayerPathFollow"]
 stream = ExtResource("8_5ky1a")
 
+[node name="AmmoLabel" type="Label" parent="."]
+offset_left = 550.0
+offset_top = 296.0
+offset_right = 590.0
+offset_bottom = 352.0
+theme_override_fonts/font = ExtResource("9_4xa4r")
+theme_override_font_sizes/font_size = 50
+
 [connection signal="timeout" from="AlienSpawnPath/AlienSpawnTimer" to="AlienSpawnPath/AlienSpawnPathFollow" method="_on_alien_spawn_timer_timeout"]
+[connection signal="ammo_up" from="EarthArea" to="." method="_on_earth_area_ammo_up"]
 [connection signal="area_entered" from="EarthArea" to="EarthArea" method="_on_area_entered"]
+[connection signal="ammo_down" from="EarthArea/PlayerPath/PlayerPathFollow" to="." method="_on_player_path_follow_ammo_down"]
