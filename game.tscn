@@ -80,8 +80,8 @@ rotation = 0.110657
 script = ExtResource("3_oa55r")
 
 [node name="PlayerArea2D" type="Area2D" parent="EarthArea/PlayerPath/PlayerPathFollow"]
-position = Vector2(-42.9758, -53.062)
-rotation = -0.266252
+position = Vector2(-6.0738, -54.6637)
+rotation = -0.11546
 
 [node name="PlayerSprite2D" type="Sprite2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
 texture = ExtResource("2_uj5e7")

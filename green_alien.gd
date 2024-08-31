@@ -1,12 +1,13 @@
-extends RigidBody2D
+extends Area2D
 
 var center_of_map
-var speed = 75.0
+var speed = 50.0
 var direction
 var green_alien_sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	print(self)
 	green_alien_sprite = get_node("GreenAlienSprite")
 	center_of_map = Vector2(573, 323)
 	direction = (center_of_map - position).normalized()

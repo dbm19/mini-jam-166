@@ -1,27 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://ie7fcfbnedy5"]
+[gd_scene load_steps=4 format=3 uid="uid://ie7fcfbnedy5"]
 
 [ext_resource type="Script" path="res://green_alien.gd" id="1_l8ipp"]
 [ext_resource type="Texture2D" uid="uid://gogaswtdnc6l" path="res://alien.png" id="1_vwxbq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_towpl"]
-radius = 32.0156
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_8jiiv"]
 radius = 32.0624
 
-[node name="GreenAlien" type="RigidBody2D"]
+[node name="GreenAlienArea" type="Area2D" groups=["alien"]]
 script = ExtResource("1_l8ipp")
 
 [node name="GreenAlienSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_vwxbq")
 
-[node name="GreenAlienCollisionShape" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_towpl")
-
-[node name="GreenAlienArea" type="Area2D" parent="." groups=["alien"]]
-
-[node name="GreenAlienAreaShape" type="CollisionShape2D" parent="GreenAlienArea"]
+[node name="GreenAlienAreaShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8jiiv")
-
-[connection signal="area_entered" from="GreenAlienArea" to="." method="_on_green_alien_area_area_entered"]

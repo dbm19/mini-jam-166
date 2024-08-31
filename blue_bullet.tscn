@@ -11,6 +11,7 @@ fill_from = Vector2(0.676606, 0.990826)
 fill_to = Vector2(0.676606, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2eyx8"]
+radius = 15.0
 
 [node name="BlueBullet" type="Area2D" groups=["bullet"]]
 script = ExtResource("1_xh5qn")
@@ -25,6 +26,13 @@ position = Vector2(0, -7.15256e-07)
 scale = Vector2(1, 1.4)
 
 [node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2eyx8")
+
+[node name="BlueBulletRigidBody" type="RigidBody2D" parent="." groups=["bullet"]]
+contact_monitor = true
+max_contacts_reported = 2
+
+[node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="BlueBulletRigidBody"]
 shape = SubResource("CircleShape2D_2eyx8")
 
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
