@@ -33,14 +33,3 @@ func _process(delta: float) -> void:
 		get_node("BulletSound").playing = true
 		ammo_down.emit()
 		
-	if Input.is_action_just_pressed("select_normal_bullet"):
-		Global.ammo_type = Global.ammo_set[0]
-		get_node("../../../WeaponSwitchSound").playing = true
-
-	if Input.is_action_just_pressed("select_peg_bullet"):
-		Global.ammo_type = Global.ammo_set[1]
-		get_node("../../../WeaponSwitchSound").playing = true
-
-	if Input.is_action_just_pressed("select_bubble_bullet"):
-		Global.ammo_type = Global.ammo_set[2]
-		get_node("../../../WeaponSwitchSound").playing = true

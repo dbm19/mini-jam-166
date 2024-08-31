@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddhg1y4i8vu3n"]
+[gd_scene load_steps=18 format=3 uid="uid://ddhg1y4i8vu3n"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_7xvf4"]
 [ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_75eix"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://shgge4o7cbl0" path="res://sounds/reload_sound.mp3" id="9_07j1b"]
 [ext_resource type="AudioStream" uid="uid://crhijuux144jm" path="res://sounds/explosion_sound.mp3" id="10_wah40"]
 [ext_resource type="AudioStream" uid="uid://4viy14by8gyb" path="res://sounds/weapon_switch_sound.mp3" id="12_xcqsi"]
+[ext_resource type="Texture2D" uid="uid://bqcen13klrgme" path="res://art_assets/normal_select.png" id="13_606i7"]
 
 [sub_resource type="Curve2D" id="Curve2D_cgxby"]
 _data = {
@@ -112,6 +113,14 @@ theme_override_font_sizes/font_size = 50
 
 [node name="WeaponSwitchSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_xcqsi")
+
+[node name="AmmoSelection" type="TextureRect" parent="."]
+offset_left = 540.0
+offset_top = 323.0
+offset_right = 606.0
+offset_bottom = 387.0
+texture = ExtResource("13_606i7")
+expand_mode = 1
 
 [connection signal="timeout" from="AlienSpawnPath/AlienSpawnTimer" to="AlienSpawnPath/AlienSpawnPathFollow" method="_on_alien_spawn_timer_timeout"]
 [connection signal="ammo_down" from="EarthArea" to="." method="_on_earth_area_ammo_down"]

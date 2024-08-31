@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rmca6472ifgi"
-path="res://.godot/imported/Screenshot 2024-08-31 at 14.50.01.png-8abac9dc81e9fcaa63bd541d97aa08cd.ctex"
+uid="uid://bngx8k4p3wu4y"
+path="res://.godot/imported/bubble_selectrion.png-889e0d611f6c39ce565062d78d674207.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art_assets/Screenshot 2024-08-31 at 14.50.01.png"
-dest_files=["res://.godot/imported/Screenshot 2024-08-31 at 14.50.01.png-8abac9dc81e9fcaa63bd541d97aa08cd.ctex"]
+source_file="res://art_assets/bubble_selectrion.png"
+dest_files=["res://.godot/imported/bubble_selectrion.png-889e0d611f6c39ce565062d78d674207.ctex"]
 
 [params]
 
