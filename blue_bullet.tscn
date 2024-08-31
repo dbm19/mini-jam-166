@@ -28,11 +28,4 @@ scale = Vector2(1, 1.4)
 [node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2eyx8")
 
-[node name="BlueBulletRigidBody" type="RigidBody2D" parent="." groups=["bullet"]]
-contact_monitor = true
-max_contacts_reported = 2
-
-[node name="BlueBulletCollisionShape" type="CollisionShape2D" parent="BlueBulletRigidBody"]
-shape = SubResource("CircleShape2D_2eyx8")
-
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
