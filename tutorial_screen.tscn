@@ -19,6 +19,7 @@ grow_vertical = 2
 script = ExtResource("1_0wjwm")
 
 [node name="TutorialBackground" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 248.0
 offset_top = -1290.0
 offset_right = 1916.0
@@ -99,6 +100,7 @@ For example, the peg alien must be shot at with the peg bullet.
 "
 
 [node name="ControlsTutorial" type="Label" parent="."]
+layout_mode = 0
 offset_left = 836.0
 offset_top = 456.0
 offset_right = 1354.0
@@ -132,6 +134,7 @@ The coloured square below it corresponds to the bullet type you've selected.
 The game ends as soon as a green alien crashes into Earth-65 when you have 0 HP/ammo."
 
 [node name="BackButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = -2.0
 offset_top = 19.0
 offset_right = 246.0
@@ -140,4 +143,7 @@ icon = ExtResource("7_vmx4h")
 flat = true
 icon_alignment = 1
 
+[connection signal="button_down" from="BackButton" to="." method="_on_back_button_button_down"]
+[connection signal="mouse_entered" from="BackButton" to="." method="_on_back_button_mouse_entered"]
+[connection signal="mouse_exited" from="BackButton" to="." method="_on_back_button_mouse_exited"]
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

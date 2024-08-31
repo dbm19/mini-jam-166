@@ -26,10 +26,22 @@ func _ready() -> void:
 	
 	score.text = str(Global.score)
 	blue_quote.text = quotes[rng.randi_range(0, 10)]
+	back_button = get_node("BackButton")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_back_button_pressed() -> void:
+	Global.menu_sound.playing = true
+	back_button.icon = load("res://art_assets/back_button_pressed.png")
 	get_tree().change_scene_to_file("res://main_menu.tscn")
+
+func _on_back_button_mouse_entered() -> void:
+	back_button.icon = load("res://art_assets/back_button_hovered.png")
+
+func _on_back_button_mouse_exited() -> void:
+	back_button.icon = load("res://art_assets/back_button.png")
+	
+func _on_back_button_button_down() -> void:
+	back_button.icon = load("res://art_assets/back_button_pressed.png")
