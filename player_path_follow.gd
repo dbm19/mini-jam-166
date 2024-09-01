@@ -31,4 +31,5 @@ func _process(delta: float) -> void:
 			bullet_instance.get_node("BulletSprite").texture = load("res://art_assets/bubble_bullet.png")
 			bullet_instance.add_to_group("bubble_bullet")
 		get_node("../../../").add_child(bullet_instance)
-		get_node("BulletSound").playing = true		
+		get_node("BulletSound").playing = true
+		Global.shots_fired += 1

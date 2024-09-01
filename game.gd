@@ -7,6 +7,7 @@ func _ready() -> void:
 	hit_points_label = get_node("HitPointsLabel")
 	hit_points_label.text = str(Global.hit_points)
 	Global.score = 0
+	Global.shots_fired = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

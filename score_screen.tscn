@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bsgl55w4s5g28"]
+[gd_scene load_steps=8 format=3 uid="uid://bsgl55w4s5g28"]
 
 [ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_7pmsq"]
 [ext_resource type="Script" path="res://score_screen.gd" id="1_45b5h"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bgrqqu43cd1jr" path="res://art_assets/score_card.png" id="3_h0j27"]
 [ext_resource type="FontFile" uid="uid://ceqsmd7sr5uio" path="res://fonts/spartan/Spartan-Regular.ttf" id="4_bhn5c"]
 [ext_resource type="Texture2D" uid="uid://dldscbg34ki0e" path="res://art_assets/back_button.png" id="6_4e71j"]
+[ext_resource type="Texture2D" uid="uid://kbi054ypii1b" path="res://art_assets/stats_card.png" id="7_6t3j6"]
 
 [node name="ScoreScreen" type="Control"]
 layout_mode = 3
@@ -73,6 +74,48 @@ offset_bottom = 175.0
 icon = ExtResource("6_4e71j")
 flat = true
 icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 473.0
+offset_right = 835.0
+offset_bottom = 609.0
+texture = ExtResource("7_6t3j6")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -122.0
+offset_right = 133.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ShotsFiredLabel" type="Label" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bhn5c")
+theme_override_font_sizes/font_size = 30
+text = "Shots fired: 0"
+
+[node name="ShotsLandedLabel" type="Label" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bhn5c")
+theme_override_font_sizes/font_size = 30
+text = "Shots landed: 0"
+
+[node name="AccuracyLabel" type="Label" parent="TextureRect/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_bhn5c")
+theme_override_font_sizes/font_size = 30
+text = "asdlfkjasdflk"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="button_down" from="BackButton" to="." method="_on_back_button_button_down"]
 [connection signal="mouse_entered" from="BackButton" to="." method="_on_back_button_mouse_entered"]

@@ -24,6 +24,7 @@ func _on_area_entered(area: Area2D) -> void:
 		remove_from_group("green_alien")
 		add_to_group("blue_alien")
 		Global.score += 1
+		Global.shots_landed += 1
 	elif area.is_in_group("peg_bullet") && is_in_group("peg_alien"):
 		green_alien_sprite.texture = load("res://art_assets/blue_alien.png")
 		remove_from_group("peg_alien")
@@ -31,6 +32,7 @@ func _on_area_entered(area: Area2D) -> void:
 		remove_from_group("green_alien")
 		add_to_group("blue_alien")
 		Global.score += 1
+		Global.shots_landed += 1
 	elif area.is_in_group("bubble_bullet") && is_in_group("bubble_alien"):
 		green_alien_sprite.texture = load("res://art_assets/blue_alien.png")
 		remove_from_group("bubble_alien")
@@ -38,3 +40,8 @@ func _on_area_entered(area: Area2D) -> void:
 		remove_from_group("green_alien")
 		add_to_group("blue_alien")
 		Global.score += 1
+		Global.shots_landed += 1
+
+	if Global.score == 100:
+		Global.player_won = true
+		get_tree().change_scene_to_file("res://score_screen.tscn")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsw7nbvcuqdej"]
+[gd_scene load_steps=6 format=3 uid="uid://bsw7nbvcuqdej"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_tkjno"]
 [ext_resource type="AudioStream" uid="uid://4tiboojh50sw" path="res://sounds/menu_sound.wav" id="2_vcktw"]
 [ext_resource type="AudioStream" uid="uid://crhijuux144jm" path="res://sounds/explosion_sound.mp3" id="3_4lir0"]
+[ext_resource type="AudioStream" uid="uid://b6d7fjojtnsw1" path="res://sounds/im_blue.wav" id="4_3fwr5"]
+[ext_resource type="AudioStream" uid="uid://b74kyxv6wfsxf" path="res://sounds/clapping_sound.mp3" id="5_881b7"]
 
 [node name="Global" type="Node"]
 script = ExtResource("1_tkjno")
@@ -12,3 +14,10 @@ stream = ExtResource("2_vcktw")
 
 [node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_4lir0")
+
+[node name="ImBlueSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3fwr5")
+
+[node name="ClappingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_881b7")
+volume_db = -10.895

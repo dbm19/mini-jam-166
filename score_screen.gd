@@ -18,15 +18,36 @@ var quotes = [
 var score 
 var blue_quote
 var back_button
+var shot_accuracy
+var shots_fired_label
+var shots_landed_label
+var accuracy_label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Global.explosion_sound.playing = true
-	score = get_node("ScoreScreenBackground/VBoxContainer/ScoreCard/Score")
 	blue_quote = get_node("ScoreScreenBackground/VBoxContainer/ScoreCard/BlueQuote")
+	score = get_node("ScoreScreenBackground/VBoxContainer/ScoreCard/Score")
+	shots_fired_label = get_node("TextureRect/VBoxContainer2/ShotsLandedLabel")
+	shots_landed_label = get_node("TextureRect/VBoxContainer2/ShotsFiredLabel")
+	accuracy_label = get_node("TextureRect/VBoxContainer2/AccuracyLabel")
+	
+	Global.clapping_sound.playing = true
+	
+	if Global.player_won == true:
+		Global.im_blue_sound.playing = true
+	else:
+		Global.explosion_sound.playing = true
 	
 	score.text = str(Global.score)
 	blue_quote.text = quotes[rng.randi_range(0, 10)]
+	
+	if Global.shots_fired != 0:
+		accuracy_label.text = "Shot accuracy: " + str(snapped(((float(Global.shots_landed) / float(Global.shots_fired)) * 100), 0.01)) + "%"
+	else:
+		accuracy_label.text = "Shot accuracy: 0%"
+		
+	shots_fired_label.text = "Shots fired: " + str(Global.shots_fired)
+	shots_landed_label.text = "Shots landed: " + str(Global.shots_landed)
 	back_button = get_node("BackButton")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
