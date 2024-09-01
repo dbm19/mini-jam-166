@@ -122,17 +122,18 @@ Press \"Esc\" to return to the main menu"
 
 [node name="ControlsTutorial2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 547.0
-offset_right = 1226.0
-offset_bottom = 704.0
+offset_left = 5.0
+offset_top = 525.0
+offset_right = 1221.0
+offset_bottom = 682.0
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 15
 text = "The number at Earth-65 represents your hit points. 
 Green aliens crashing into Earth-65 will diminish your hit points. 
 
 The coloured square below it corresponds to the bullet type you've selected.
-"
+
+The game ends when your hit points reach 0, or when you chill out 100 aliens."
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0

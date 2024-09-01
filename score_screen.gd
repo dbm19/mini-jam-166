@@ -5,12 +5,9 @@ var rng = RandomNumberGenerator.new()
 var quotes = [
 	"Blue Eggs and Ham",
 	"Bluesleeves",
-	"Blue Day",
 	"Anne of Blue Gables",
-	"Blue Lantern",
 	"Blue Tea",
 	"The Blue Mile",
-	"Blueland",
 	"Bluewich",
 	"Bluehouse Effect",
 	"Blue Bay Packers",
@@ -35,11 +32,12 @@ func _ready() -> void:
 	
 	if Global.player_won == true:
 		Global.im_blue_sound.playing = true
+		Global.background_music.playing = false
 	else:
 		Global.explosion_sound.playing = true
 	
 	score.text = str(Global.score)
-	blue_quote.text = quotes[rng.randi_range(0, 10)]
+	blue_quote.text = quotes[rng.randi_range(0, 7)]
 	
 	if Global.shots_fired != 0:
 		accuracy_label.text = "Shot accuracy: " + str(snapped(((float(Global.shots_landed) / float(Global.shots_fired)) * 100), 0.01)) + "%"

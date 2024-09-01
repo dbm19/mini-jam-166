@@ -8,6 +8,7 @@ func _ready() -> void:
 	new_game_button = get_node("VBoxContainer2/NewGameButton")
 	tutorial_button = get_node("VBoxContainer2/TutorialButton")
 	Global.clapping_sound.playing = false
+	Global.background_music.playing = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
