@@ -11,6 +11,7 @@ var clapping_sound
 var shots_fired
 var shots_landed
 var background_music
+var uhh_sound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +26,9 @@ func _ready() -> void:
 	im_blue_sound = get_node("ImBlueSound")
 	clapping_sound = get_node("ClappingSound")
 	background_music = get_node("BackgroundMusic")
+	uhh_sound = get_node("UhhSound")
+
+	background_music.playing = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

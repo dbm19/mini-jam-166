@@ -28,14 +28,20 @@ func _ready() -> void:
 	shots_landed_label = get_node("TextureRect/VBoxContainer2/ShotsFiredLabel")
 	accuracy_label = get_node("TextureRect/VBoxContainer2/AccuracyLabel")
 	
-	Global.clapping_sound.playing = true
 	
 	if Global.player_won == true:
 		Global.im_blue_sound.playing = true
+		Global.clapping_sound.playing = true
 		Global.background_music.playing = false
 	else:
 		Global.explosion_sound.playing = true
-	
+		if Global.score == 0:
+			Global.uhh_sound.playing = true
+			Global.background_music.playing = false
+
+		else:
+			Global.clapping_sound.playing = true
+
 	score.text = str(Global.score)
 	blue_quote.text = quotes[rng.randi_range(0, 7)]
 	
@@ -54,6 +60,8 @@ func _process(delta: float) -> void:
 
 func _on_back_button_pressed() -> void:
 	Global.menu_sound.playing = true
+	if Global.background_music.playing == false:
+		Global.background_music.playing = true
 	back_button.icon = load("res://art_assets/back_button_pressed.png")
 	get_tree().change_scene_to_file("res://main_menu.tscn")
 
