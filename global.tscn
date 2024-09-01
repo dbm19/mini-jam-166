@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsw7nbvcuqdej"]
+[gd_scene load_steps=4 format=3 uid="uid://bsw7nbvcuqdej"]
 
 [ext_resource type="Script" path="res://global.gd" id="1_tkjno"]
 [ext_resource type="AudioStream" uid="uid://4tiboojh50sw" path="res://sounds/menu_sound.wav" id="2_vcktw"]
+[ext_resource type="AudioStream" uid="uid://crhijuux144jm" path="res://sounds/explosion_sound.mp3" id="3_4lir0"]
 
 [node name="Global" type="Node"]
 script = ExtResource("1_tkjno")
 
 [node name="MenuSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_vcktw")
+
+[node name="ExplosionSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_4lir0")

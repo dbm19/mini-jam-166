@@ -1,17 +1,19 @@
 extends Node
-var ammo
+var hit_points
 var ammo_set = ["normal", "peg", "bubble"]
 var ammo_type
 var score = 0
 var menu_sound
+var explosion_sound
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	ammo = 5
+	hit_points = 3
 	ammo_type = ammo_set[0]
 	
 	menu_sound = get_node("MenuSound")
+	explosion_sound = get_node("ExplosionSound")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

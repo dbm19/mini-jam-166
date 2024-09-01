@@ -21,6 +21,7 @@ var back_button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.explosion_sound.playing = true
 	score = get_node("ScoreScreenBackground/VBoxContainer/ScoreCard/Score")
 	blue_quote = get_node("ScoreScreenBackground/VBoxContainer/ScoreCard/BlueQuote")
 	

@@ -29,10 +29,10 @@ texture = ExtResource("1_nruhg")
 
 [node name="Earth" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 592.0
-offset_top = 457.0
-offset_right = 721.0
-offset_bottom = 565.0
+offset_left = 545.0
+offset_top = 469.0
+offset_right = 674.0
+offset_bottom = 577.0
 texture = ExtResource("2_wwk7y")
 expand_mode = 1
 
@@ -94,9 +94,12 @@ offset_bottom = 136.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 20
-text = "The objective of this game is to convert as many green aliens into blue aliens.
+text = "Your objective is to convert as many green aliens into blue aliens.
 Green aliens must be shot at with the correct bullet type in order to become blue. 
-For example, the peg alien must be shot at with the peg bullet.
+
+Normal Bullets -> Normal Aliens
+Peg Bullets -> Peg Aliens
+Bubble Bullets -> Bubble Aliens
 "
 
 [node name="ControlsTutorial" type="Label" parent="."]
@@ -119,19 +122,17 @@ Press \"Esc\" to return to the main menu"
 
 [node name="ControlsTutorial2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 498.0
-offset_right = 1219.0
-offset_bottom = 655.0
+offset_left = 10.0
+offset_top = 547.0
+offset_right = 1226.0
+offset_bottom = 704.0
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 15
-text = "The number at Earth-65 represents both your hit points and your ammo.
-Blue aliens crashing into Earth-65 will replenish your HP/ammo.
-Green aliens crashing into Earth-65 will diminish your HP/ammo.
+text = "The number at Earth-65 represents your hit points. 
+Green aliens crashing into Earth-65 will diminish your hit points. 
 
 The coloured square below it corresponds to the bullet type you've selected.
-
-The game ends as soon as a green alien crashes into Earth-65 when you have 0 HP/ammo."
+"
 
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 0

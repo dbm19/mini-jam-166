@@ -20,7 +20,7 @@ func _on_new_game_button_button_up() -> void:
 
 func _on_new_game_button_pressed() -> void:
 	Global.menu_sound.playing = true
-	Global.ammo = 5 
+	Global.hit_points = 3
 	get_tree().change_scene_to_file("res://game.tscn")
 
 func _on_new_game_button_mouse_entered() -> void:
