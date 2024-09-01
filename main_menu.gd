@@ -20,8 +20,8 @@ func _on_new_game_button_button_up() -> void:
 
 func _on_new_game_button_pressed() -> void:
 	Global.menu_sound.playing = true
-	get_tree().change_scene_to_file("res://game.tscn")
 	Global.ammo = 5 
+	get_tree().change_scene_to_file("res://game.tscn")
 
 func _on_new_game_button_mouse_entered() -> void:
 	new_game_button.icon = load("res://art_assets/new_game_button_hovered.png")
