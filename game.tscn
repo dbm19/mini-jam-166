@@ -104,12 +104,14 @@ shape = SubResource("CircleShape2D_04d4h")
 
 [node name="BulletSound" type="AudioStreamPlayer2D" parent="EarthArea/PlayerPath/PlayerPathFollow"]
 stream = ExtResource("8_5ky1a")
+volume_db = -5.0
 
 [node name="ReloadSound" type="AudioStreamPlayer2D" parent="EarthArea"]
 stream = ExtResource("9_07j1b")
 
 [node name="ExplosionSound" type="AudioStreamPlayer2D" parent="EarthArea"]
 stream = ExtResource("10_wah40")
+volume_db = -10.0
 
 [node name="HitPointsLabel" type="Label" parent="."]
 z_index = 1

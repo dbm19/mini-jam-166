@@ -87,10 +87,10 @@ text = "Normal Alien
 
 [node name="GameTutorial" type="Label" parent="."]
 layout_mode = 0
-offset_left = 292.0
-offset_top = 43.0
-offset_right = 1356.0
-offset_bottom = 136.0
+offset_left = 285.0
+offset_top = 11.0
+offset_right = 1349.0
+offset_bottom = 170.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 20
@@ -104,10 +104,10 @@ Bubble Bullets -> Bubble Aliens
 
 [node name="ControlsTutorial" type="Label" parent="."]
 layout_mode = 0
-offset_left = 836.0
-offset_top = 456.0
-offset_right = 1354.0
-offset_bottom = 741.0
+offset_left = 840.0
+offset_top = 470.0
+offset_right = 1358.0
+offset_bottom = 755.0
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 15
 text = "Press \"A\" to move counter-clockwise
@@ -123,12 +123,13 @@ Press \"Esc\" to return to the main menu"
 [node name="ControlsTutorial2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 483.0
+offset_top = 470.0
 offset_right = 1217.0
-offset_bottom = 640.0
+offset_bottom = 647.0
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 15
-text = "You control the movement and fire bullets from the blue triangle. 
+text = "You control the movement of and fire bullets from the blue triangle. 
+
 The number at Earth-65 represents your hit points. 
 Green aliens crashing into Earth-65 will diminish your hit points. 
 Blue aliens will pass through without causing damage.
