@@ -2,13 +2,20 @@ extends Control
 
 var new_game_button
 var tutorial_button
+var music_button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	new_game_button = get_node("VBoxContainer2/NewGameButton")
 	tutorial_button = get_node("VBoxContainer2/TutorialButton")
+	music_button = get_node("MusicButton")
+	if Global.music_off == true:
+		music_button.icon = load("res://art_assets/volume_off_icon.png")
+	else:
+		music_button.icon = load("res://art_assets/volume_on_icon.png")
+	
 	Global.clapping_sound.playing = false
-
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -42,3 +49,12 @@ func _on_tutorial_button_mouse_entered() -> void:
 
 func _on_tutorial_button_mouse_exited() -> void:
 	tutorial_button.icon = load("res://art_assets/tutorial_button.png")
+
+func _on_music_button_pressed() -> void:
+	if Global.music_off == false:
+		music_button.icon = load("res://art_assets/volume_off_icon.png")
+		Global.background_music.playing = false
+	else:
+		music_button.icon = load("res://art_assets/volume_on_icon.png")
+		Global.background_music.playing = true 
+	Global.music_off = !Global.music_off

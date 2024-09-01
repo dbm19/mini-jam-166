@@ -12,6 +12,7 @@ var shots_fired
 var shots_landed
 var background_music
 var uhh_sound
+var music_off
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,6 +21,7 @@ func _ready() -> void:
 	ammo_type = ammo_set[0]
 	shots_fired = 0
 	shots_landed = 0
+	music_off = false
 	
 	menu_sound = get_node("MenuSound")
 	explosion_sound = get_node("ExplosionSound")
