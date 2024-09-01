@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bgd5p2ftcw740" path="res://art_assets/bubble_alien.png" id="2_a00nr"]
 [ext_resource type="FontFile" uid="uid://ceqsmd7sr5uio" path="res://fonts/spartan/Spartan-Regular.ttf" id="2_cvukq"]
 [ext_resource type="Texture2D" uid="uid://drfqd5vq4r5nw" path="res://art_assets/peg_alien.png" id="3_nnkoj"]
-[ext_resource type="Texture2D" uid="uid://b3l3vrlwgpopt" path="res://art_assets/Screenshot 2024-09-01 at 12.39.08.png" id="3_xqch2"]
+[ext_resource type="Texture2D" uid="uid://b5l4whh2yrnui" path="res://art_assets/Screenshot 2024-09-01 at 15.37.30.png" id="3_wdttv"]
 [ext_resource type="Texture2D" uid="uid://gogaswtdnc6l" path="res://art_assets/alien.png" id="4_52878"]
 [ext_resource type="Texture2D" uid="uid://dldscbg34ki0e" path="res://art_assets/back_button.png" id="7_vmx4h"]
 
@@ -29,11 +29,11 @@ texture = ExtResource("1_nruhg")
 
 [node name="Earth" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 545.0
-offset_top = 469.0
-offset_right = 674.0
-offset_bottom = 577.0
-texture = ExtResource("3_xqch2")
+offset_left = 563.0
+offset_top = 418.0
+offset_right = 717.0
+offset_bottom = 581.0
+texture = ExtResource("3_wdttv")
 expand_mode = 1
 
 [node name="BubbleAlien" type="TextureRect" parent="."]
