@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_nruhg"]
 [ext_resource type="Texture2D" uid="uid://bgd5p2ftcw740" path="res://art_assets/bubble_alien.png" id="2_a00nr"]
 [ext_resource type="FontFile" uid="uid://ceqsmd7sr5uio" path="res://fonts/spartan/Spartan-Regular.ttf" id="2_cvukq"]
-[ext_resource type="Texture2D" uid="uid://cetamrhf5y41o" path="res://art_assets/Screenshot 2024-08-31 at 15.17.11.png" id="2_wwk7y"]
 [ext_resource type="Texture2D" uid="uid://drfqd5vq4r5nw" path="res://art_assets/peg_alien.png" id="3_nnkoj"]
+[ext_resource type="Texture2D" uid="uid://b3l3vrlwgpopt" path="res://art_assets/Screenshot 2024-09-01 at 12.39.08.png" id="3_xqch2"]
 [ext_resource type="Texture2D" uid="uid://gogaswtdnc6l" path="res://art_assets/alien.png" id="4_52878"]
 [ext_resource type="Texture2D" uid="uid://dldscbg34ki0e" path="res://art_assets/back_button.png" id="7_vmx4h"]
 
@@ -33,7 +33,7 @@ offset_left = 545.0
 offset_top = 469.0
 offset_right = 674.0
 offset_bottom = 577.0
-texture = ExtResource("2_wwk7y")
+texture = ExtResource("3_xqch2")
 expand_mode = 1
 
 [node name="BubbleAlien" type="TextureRect" parent="."]
@@ -122,13 +122,14 @@ Press \"Esc\" to return to the main menu"
 
 [node name="ControlsTutorial2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 507.0
-offset_right = 1224.0
-offset_bottom = 664.0
+offset_left = 1.0
+offset_top = 483.0
+offset_right = 1217.0
+offset_bottom = 640.0
 theme_override_fonts/font = ExtResource("2_cvukq")
 theme_override_font_sizes/font_size = 15
-text = "The number at Earth-65 represents your hit points. 
+text = "You control the movement and fire bullets from the blue triangle. 
+The number at Earth-65 represents your hit points. 
 Green aliens crashing into Earth-65 will diminish your hit points. 
 Blue aliens will pass through without causing damage.
 
