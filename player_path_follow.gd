@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 		#progress += -speed
 		player_area.rotation_degrees -= 4
 		
-	print(get_node("PlayerArea2D/Marker2D").global_position)
 	if Input.is_action_just_pressed("fire_bullet") && Global.hit_points > 0:
 		bullet_instance = bullet_scene.instantiate()
 		bullet_instance.global_position = get_node("PlayerArea2D/Marker2D").global_position
