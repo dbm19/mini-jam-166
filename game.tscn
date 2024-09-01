@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://game.gd" id="1_7xvf4"]
 [ext_resource type="Texture2D" uid="uid://bj46te7e50uib" path="res://art_assets/background.png" id="1_75eix"]
 [ext_resource type="Script" path="res://earth_area.gd" id="2_5esps"]
-[ext_resource type="Texture2D" uid="uid://biuavkrjjv3kh" path="res://art_assets/icon.svg" id="2_uj5e7"]
 [ext_resource type="Script" path="res://player_path_follow.gd" id="3_oa55r"]
 [ext_resource type="Texture2D" uid="uid://cff4pquraawg2" path="res://art_assets/new_earth.png" id="4_n1syj"]
 [ext_resource type="Script" path="res://alien_spawn_path_follow.gd" id="5_tf72t"]
+[ext_resource type="Texture2D" uid="uid://hx3hs18v1y0q" path="res://art_assets/player_sprite.png" id="7_r2uai"]
 [ext_resource type="AudioStream" uid="uid://ba7iilcv024u6" path="res://sounds/laser_sound.wav" id="8_5ky1a"]
 [ext_resource type="FontFile" uid="uid://dxupukfoqr3bi" path="res://fonts/spartan/Spartan-Bold.ttf" id="9_4xa4r"]
 [ext_resource type="AudioStream" uid="uid://shgge4o7cbl0" path="res://sounds/reload_sound.mp3" id="9_07j1b"]
@@ -31,7 +31,7 @@ _data = {
 point_count = 68
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04d4h"]
-radius = 5.0
+radius = 7.07106
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_7xvf4")
@@ -65,6 +65,7 @@ position = Vector2(573, 324)
 script = ExtResource("2_5esps")
 
 [node name="EarthSprite" type="Sprite2D" parent="EarthArea"]
+z_index = 1
 position = Vector2(-1.66893e-06, -1.19209e-06)
 scale = Vector2(1.43555, 1.43555)
 texture = ExtResource("4_n1syj")
@@ -85,14 +86,20 @@ rotation = 0.110657
 script = ExtResource("3_oa55r")
 
 [node name="PlayerArea2D" type="Area2D" parent="EarthArea/PlayerPath/PlayerPathFollow"]
-position = Vector2(-6.0738, -54.6637)
+position = Vector2(28.7121, 235.771)
 rotation = -0.11546
 
 [node name="PlayerSprite2D" type="Sprite2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
-texture = ExtResource("2_uj5e7")
+position = Vector2(-2.56001, 12.4878)
+scale = Vector2(1.70366, 6.02602)
+texture = ExtResource("7_r2uai")
+
+[node name="Marker2D" type="Marker2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
+position = Vector2(-0.699097, -375.008)
+scale = Vector2(1.70366, 6.02602)
 
 [node name="PlayerCollisionShape" type="CollisionShape2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
-position = Vector2(3.05176e-05, -2.5)
+position = Vector2(-5.4322, 89.9749)
 shape = SubResource("CircleShape2D_04d4h")
 
 [node name="BulletSound" type="AudioStreamPlayer2D" parent="EarthArea/PlayerPath/PlayerPathFollow"]
@@ -105,6 +112,7 @@ stream = ExtResource("9_07j1b")
 stream = ExtResource("10_wah40")
 
 [node name="HitPointsLabel" type="Label" parent="."]
+z_index = 1
 offset_left = 555.0
 offset_top = 245.0
 offset_right = 595.0
@@ -116,6 +124,7 @@ theme_override_font_sizes/font_size = 50
 stream = ExtResource("12_xcqsi")
 
 [node name="AmmoSelection" type="TextureRect" parent="."]
+z_index = 1
 offset_left = 540.0
 offset_top = 323.0
 offset_right = 606.0
