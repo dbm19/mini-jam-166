@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://player_path_follow.gd" id="3_oa55r"]
 [ext_resource type="Texture2D" uid="uid://cff4pquraawg2" path="res://art_assets/new_earth.png" id="4_n1syj"]
 [ext_resource type="Script" path="res://alien_spawn_path_follow.gd" id="5_tf72t"]
-[ext_resource type="Texture2D" uid="uid://hx3hs18v1y0q" path="res://art_assets/player_sprite.png" id="7_r2uai"]
+[ext_resource type="Texture2D" uid="uid://kat5voah7nfd" path="res://art_assets/new_player_sprite.png" id="7_4nwt3"]
 [ext_resource type="AudioStream" uid="uid://ba7iilcv024u6" path="res://sounds/laser_sound.wav" id="8_5ky1a"]
 [ext_resource type="FontFile" uid="uid://dxupukfoqr3bi" path="res://fonts/spartan/Spartan-Bold.ttf" id="9_4xa4r"]
 [ext_resource type="AudioStream" uid="uid://shgge4o7cbl0" path="res://sounds/reload_sound.mp3" id="9_07j1b"]
@@ -90,9 +90,9 @@ position = Vector2(28.7121, 235.771)
 rotation = -0.11546
 
 [node name="PlayerSprite2D" type="Sprite2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
-position = Vector2(-2.56001, 12.4878)
-scale = Vector2(1.70366, 6.02602)
-texture = ExtResource("7_r2uai")
+position = Vector2(-3.55909, -289.436)
+scale = Vector2(1.21658, 1.05117)
+texture = ExtResource("7_4nwt3")
 
 [node name="Marker2D" type="Marker2D" parent="EarthArea/PlayerPath/PlayerPathFollow/PlayerArea2D"]
 position = Vector2(-0.699097, -375.008)
